@@ -1,0 +1,1491 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://dbpedia.org/ontology/MeanOfTransportation", "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology", "https://dbpedia.org/ontology/City", "http://www.w3.org/2000/01/rdf-schema", "https://dbpedia.org/ontology/starRating", "https://dbpedia.org/ontology", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1", "https://w3id.org/arco/ontology/location", "https://dbpedia.org/ontology/Restaurant" ],
+    "title" : {
+      "en" : "IntelligentTourismOntology"
+    },
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "version" : "1.0",
+    "author" : [ "Héctor Aguirrezábal Blanco" ],
+    "labels" : {
+      "en" : "Intelligent Tourism Ontology"
+    },
+    "comments" : {
+      "en" : "Ontology that models the main entities involved in intelligent tourism such as cities, hotels, events, transport and ratings."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Héctor Aguirrezábal Blanco",
+        "type" : "label"
+      } ],
+      "imports" : [ {
+        "identifier" : "imports",
+        "language" : "en",
+        "value" : "http://dbpedia.org/ontology/building\nhttp://xmlns.com/foaf/spec/#term_name\nhttps://dati.beniculturali.it/lodview-arco-onto/ontology/location/Coordinates.html",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "en",
+        "value" : "24-04-2025",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "IntelligentTourismOntology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "98",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "90",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#TouristicAttractionType",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TouristicAttractionType",
+      "en" : "Touristic Attraction Type"
+    },
+    "subClasses" : [ "5", "6", "7", "8" ],
+    "comment" : {
+      "en" : "Tourist Attraction Type is a classification or category that identifies the specific nature or theme of a tourist destination"
+    },
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#TouristicHotel",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TouristicHotel",
+      "en" : "Touristic Hotel"
+    },
+    "comment" : {
+      "en" : "Touristic hotel is the type of hotel which has its origin in the hospitality services dedicated to leisure and vacation-oriented guests."
+    },
+    "id" : "15",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Venue",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "https://dbpedia.org/ontology",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Venue",
+      "en" : "dbo:Venue"
+    },
+    "comment" : {
+      "en" : "A Venue is the place where something happens, especially an organized event such as a concert, conference, or sports competition."
+    },
+    "id" : "23",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Technological",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Technological",
+      "en" : "TechnologicalEvent"
+    },
+    "comment" : {
+      "en" : "A technological event involves innovation, scientific advancements, or demonstrations of new technologies, such as tech fairs or conferences."
+    },
+    "id" : "32",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Event",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event"
+    },
+    "subClasses" : [ "18" ],
+    "comment" : {
+      "en" : "An event is a temporary and scheduled happening, like a conference, festival, competition or similar"
+    },
+    "id" : "17"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#CulturalAttraction",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalAttraction",
+      "en" : "Cultural Attraction"
+    },
+    "comment" : {
+      "en" : "Cultural Atraction is a place or event that showcases the heritage, traditions, art, or history of a society or region."
+    },
+    "id" : "5",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#CulturalEvent",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalEvent",
+      "en" : "CulturalEvent"
+    },
+    "comment" : {
+      "en" : "A cultural event is an occasion that promotes or celebrates the arts, heritage, or traditions of a community or region."
+    },
+    "id" : "41",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#MidPriceRestaurant",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MidPriceRestaurant",
+      "en" : "Mid Price Restaurant"
+    },
+    "comment" : {
+      "en" : "The price of the average meals is strictly over 15 and equals or inferior to 50."
+    },
+    "id" : "29",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Bus",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bus",
+      "en" : "Bus"
+    },
+    "comment" : {
+      "en" : "A bus is a large motor vehicle designed to carry many passengers, usually following fixed routes and schedules."
+    },
+    "id" : "51",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Metro",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Metro",
+      "en" : "Metro"
+    },
+    "comment" : {
+      "en" : "A metro is a high-capacity urban public transit system operating on dedicated tracks, often underground or elevated."
+    },
+    "id" : "57",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#CuisineStyle",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CuisineStyle",
+      "en" : "CuisineStyle"
+    },
+    "subClasses" : [ "45", "43", "47", "37", "34" ],
+    "comment" : {
+      "en" : "Cuisine Style is a national cuisine of a food or restaurant."
+    },
+    "id" : "35"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Mexican",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mexican",
+      "en" : "Mexican Cuisine"
+    },
+    "comment" : {
+      "en" : "Mexican cuisine is the style of cuisine which have its origin in the Mexican gastronomy tradition."
+    },
+    "id" : "37",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#CheapRestaurant",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CheapRestaurant",
+      "en" : "Cheap Restaurant"
+    },
+    "comment" : {
+      "en" : "The price of the average meals is equal or inferior to 15."
+    },
+    "id" : "26",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Mediterranean",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mediterranean",
+      "en" : "Mediterranean Cuisine"
+    },
+    "comment" : {
+      "en" : "Mediterranean cuisine is the style of cuisine which have its origin in the Mediterranean gastronomy tradition."
+    },
+    "id" : "47",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "https://dbpedia.org/ontology/Hotel",
+    "baseIri" : "https://dbpedia.org/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Hotel",
+      "en" : "dbo:Hotel"
+    },
+    "subClasses" : [ "11" ],
+    "comment" : {
+      "en" : "A hotel is a business enterprise that provides lodging in a single building paid on a short-term basis"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Beach",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Beach",
+      "en" : "Beach"
+    },
+    "comment" : {
+      "en" : "A beach is a natural landform along the shoreline of an ocean, sea, lake, or river, often visited for recreation and relaxation."
+    },
+    "id" : "6",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Rating",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Rating",
+      "en" : "Rating"
+    },
+    "comment" : {
+      "en" : "Rating is a classification or ranking of  something based on a comparative assessment of their quality, standard, or performance."
+    },
+    "id" : "50"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Bicycle",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Bicycle",
+      "en" : "Bicycle"
+    },
+    "comment" : {
+      "en" : "A bicycle is a human-powered two-wheeled vehicle used for personal transportation, especially in urban and recreational contexts."
+    },
+    "id" : "78",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#LuxuryHotel",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LuxuryHotel",
+      "en" : "Luxury Hotel"
+    },
+    "comment" : {
+      "en" : "Luxury hotel is the type of hotel which has its origin in premium hospitality experiences that offer high-end services and exclusive amenities."
+    },
+    "id" : "20",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#BeachHotel",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BeachHotel",
+      "en" : "Beach Hotel"
+    },
+    "comment" : {
+      "en" : "Beach hotel is the type of hotel which has its origin in tourism facilities located near or on the coast, designed for beach-related activities."
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://dbpedia.org/ontology/MeanOfTransportation#MeanOfTransportationType",
+    "baseIri" : "https://dbpedia.org/ontology/MeanOfTransportation",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeanOfTransportationType",
+      "undefined" : "Mean of Transportation Type"
+    },
+    "subClasses" : [ "82", "51", "57", "83", "78" ],
+    "comment" : {
+      "en" : "Mean of Transportation type refers to the classification of transportation modes based on their means of mobility and typical usage in urban or intercity travel."
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#EventType",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EventType"
+    },
+    "subClasses" : [ "80", "41", "74", "32", "66" ],
+    "id" : "18",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Gastronomy",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gastronomy",
+      "en" : "GastronomyEvent"
+    },
+    "comment" : {
+      "en" : "A gastronomy event focuses on food, culinary traditions, and the appreciation of cuisine, such as food festivals or tasting experiences."
+    },
+    "id" : "66",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Japanese",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Japanese",
+      "en" : "Japanese Cuisine"
+    },
+    "comment" : {
+      "en" : "Japanese cuisine is the style of cuisine which have its origin in the Japanese gastronomy tradition."
+    },
+    "id" : "43",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Park",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Park",
+      "en" : "Park"
+    },
+    "comment" : {
+      "en" : "A park is a public outdoor space typically designed for recreation, relaxation, and the enjoyment of nature."
+    },
+    "id" : "8",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Andalusian",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Andalusian",
+      "en" : "Andalusian Cuisine"
+    },
+    "comment" : {
+      "en" : "Andalusian cuisine is the style of cuisine which have its origin in the gastronomy tradition of the Spanish region of Andalucía."
+    },
+    "id" : "45",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Italian",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Italian",
+      "en" : "Italian Cuisine"
+    },
+    "comment" : {
+      "en" : "Italian cuisine is the style of cuisine which have its origin in the Italy gastronomy tradition."
+    },
+    "id" : "34",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Monument",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Monument",
+      "en" : "Monument"
+    },
+    "comment" : {
+      "en" : "A monument is a structure or site of historical, cultural, or artistic significance, often erected to commemorate an event or person."
+    },
+    "id" : "7",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://dbpedia.org/ontology/MeanOfTransportation",
+    "baseIri" : "https://dbpedia.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MeanOfTransportation",
+      "en" : "dbo:Mean of Transportation"
+    },
+    "subClasses" : [ "52", "55" ],
+    "comment" : {
+      "en" : "Mean of Transportation is a system, vehicle, or method used to carry or move people or goods from one place to another"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Taxi",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Taxi",
+      "en" : "Taxi"
+    },
+    "comment" : {
+      "en" : "A taxi is a road vehicle for hire that transports passengers between locations of their choice, typically for a metered fare."
+    },
+    "id" : "82",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Music",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Music",
+      "en" : "MusicEvent"
+    },
+    "comment" : {
+      "en" : "A music event features live or recorded musical performances, concerts, festivals, or competitions."
+    },
+    "id" : "80",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "96",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#TransportationCompany",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TransportationCompany",
+      "en" : "Transportation Company"
+    },
+    "comment" : {
+      "en" : "A transportation company is an organization responsible for operating transport services such as buses, taxis, metro systems, or other means of mobility."
+    },
+    "id" : "55",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Tram",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tram",
+      "en" : "Tram"
+    },
+    "comment" : {
+      "en" : "A tram is a rail vehicle that runs on tracks along public urban streets and is used for local public transport."
+    },
+    "id" : "83",
+    "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "https://dbpedia.org/ontology/Building",
+    "baseIri" : "https://dbpedia.org/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "https://dbpedia.org/ontology/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Building",
+      "en" : "dbo:Building"
+    },
+    "subClasses" : [ "22", "23", "13" ],
+    "comment" : {
+      "en" : "Building is defined as a Civil Engineering structure such as a house, worship center, factory etc. that has a foundation, wall, roof etc. that protect human being and their properties from direct harsh effect of weather like rain, wind, sun etc. (http://en.wikipedia.org/wiki/Building)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "61",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "17", "4", "24" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "98"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#RuralHotel",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RuralHotel",
+      "en" : "Rural Hotel"
+    },
+    "comment" : {
+      "en" : "Rural hotel is the type of hotel which has its origin in the hospitality services that takes place in the rural environments."
+    },
+    "id" : "88",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://dbpedia.org/ontology/City#City",
+    "baseIri" : "https://dbpedia.org/ontology/City",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "dbo:data/definitions.ttl",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "dbo:City"
+    },
+    "comment" : {
+      "en" : "A city is a large human settlement."
+    },
+    "attributes" : [ "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://dbpedia.org/ontology/Restaurant#Restaurant",
+    "baseIri" : "https://dbpedia.org/ontology/Restaurant",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restaurant",
+      "en" : "dbo:Restaurant"
+    },
+    "subClasses" : [ "26", "31", "29" ],
+    "comment" : {
+      "en" : "A restaurant is a single establishment which prepares and serves food, located in building"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "24" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#HotelType",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HotelType",
+      "en" : "Hotel Type"
+    },
+    "subClasses" : [ "20", "10", "90", "88", "15" ],
+    "comment" : {
+      "en" : "Hotel type refers to the classification of hotels based on their purpose, location, amenities, or target clientele."
+    },
+    "id" : "11",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#BusinessHotel",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusinessHotel",
+      "en" : "Business Hotel"
+    },
+    "comment" : {
+      "en" : "Business hotel is the type of hotel which has its origin in the hospitality services focused on corporate or professional travelers."
+    },
+    "id" : "90",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/arco/ontology/location/Coordinates",
+    "baseIri" : "https://w3id.org/arco/ontology/location",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "https://w3id.org/arco/ontology/location/Coordinates",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Coordinates",
+      "en" : "a-loc:Coordinates"
+    },
+    "comment" : {
+      "en" : "This class represents the set of coordinates, geographic or projected, which allows the georeferencing of an object. For the punctual georeferencing there is only a pair of coordinates. For the linear and areal georeferencing there are more pairs of coordinates identifying those points of the line or area representing the object."
+    },
+    "attributes" : [ "external" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Sports",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sports",
+      "en" : "SportsEvent"
+    },
+    "comment" : {
+      "en" : "A sports event involves physical competitions or athletic performances, including tournaments, matches, or races."
+    },
+    "id" : "74",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#TouristicAttraction",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TouristicAttraction",
+      "en" : "Touristic Attraction"
+    },
+    "subClasses" : [ "3" ],
+    "comment" : {
+      "en" : "A tourist attraction is a place of interest that tourists visit, typically for its inherent or exhibited cultural value, historical significance, natural or artificial beauty, or entertainment opportunities."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#ExpensiveRestaurant",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExpensiveRestaurant",
+      "en" : "Expensive Restaurant"
+    },
+    "comment" : {
+      "en" : "The price of the average meals is over 50."
+    },
+    "id" : "31",
+    "superClasses" : [ "13" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "101",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#averagePricePerTransit",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "averagePricePerTransit",
+      "en" : "average price per transit"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates the average price of a transit by a mean of transportation."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#averagePricePerMeal",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "averagePricePerMeal",
+      "en" : "average price per meal"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Indicates the average price of a meal per person."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#hasType",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "hasType",
+      "en" : "has event type"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Relates a type of event to an event."
+    },
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "range" : "11",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "22",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "13",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "24",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "13",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "13",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "35",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "35",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "24",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "24",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#hasCuisineStyle",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasCuisineStyle",
+      "en" : "has cuisine style"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Indicates the cuisine style offered by a restaurant"
+    },
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "range" : "35",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "35",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "35",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "17",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#hasAttractionRating",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasAttractionRating",
+      "en" : "has attraction rating"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates an attraction to its associated rating value."
+    },
+    "attributes" : [ "object" ],
+    "id" : "49"
+  }, {
+    "range" : "3",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "1",
+    "domain" : "55",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "1",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "56"
+  }, {
+    "range" : "3",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "3",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/name",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "range" : "62",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "http://xmlns.com/foaf/0.1/name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "foaf:name"
+    },
+    "domain" : "61",
+    "comment" : {
+      "en" : "A name for some thing."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "60"
+  }, {
+    "range" : "3",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#hasHotelType",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasHotelType",
+      "en" : "has hotel type"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Relates a type of hotel to a hotel."
+    },
+    "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "range" : "18",
+    "domain" : "66",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "18",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#areCoordinatesOf",
+    "inverse" : "72",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "areCoordinatesOf",
+      "en" : "are coordinates of"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Relates a set of coordinates with a city."
+    },
+    "attributes" : [ "object" ],
+    "id" : "69"
+  }, {
+    "range" : "18",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "range" : "18",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Longitude",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "77",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "https://w3id.org/arco/ontology/location/long",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Longitude",
+      "en" : "longitude"
+    },
+    "cardinality" : "1",
+    "domain" : "70",
+    "comment" : {
+      "en" : "In this case use as a Datatype double instead of literal despite of the definition of the ontology reused."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "range" : "18",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "79"
+  }, {
+    "range" : "52",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "81"
+  }, {
+    "range" : "52",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "52",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "range" : "52",
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  }, {
+    "range" : "11",
+    "domain" : "88",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "87"
+  }, {
+    "range" : "11",
+    "domain" : "90",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "range" : "52",
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "91"
+  }, {
+    "range" : "11",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#hasRestaurantRating",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasRestaurantRating",
+      "en" : "has restaurant rating"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Relates a restaurant to its associated rating value."
+    },
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#averagePricePerNight",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "averagePricePerNight",
+      "en" : "average price per night"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Indicates the average price of a night in a hotel."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#hasCoordinates",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "hasCoordinates",
+      "en" : "has coordinates"
+    },
+    "domain" : "71",
+    "comment" : {
+      "en" : "Relates a city to its geographical coordinates."
+    },
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#cityOf",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "cityOf"
+    },
+    "domain" : "98",
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#Latitude",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "99",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "https://w3id.org/arco/ontology/location/lat",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Latitude",
+      "en" : "latitude"
+    },
+    "cardinality" : "1",
+    "domain" : "70",
+    "comment" : {
+      "en" : "This property represents the y coordinate, that is the latitude."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "101"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#rating",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "96",
+    "label" : {
+      "IRI-based" : "rating",
+      "en" : "rating"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "Indicates the evaluation score of a resource"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://dbpedia.org/ontology/starRating#star_rating",
+    "baseIri" : "https://dbpedia.org/ontology/starRating",
+    "range" : "97",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "en",
+        "value" : "http://dbpedia.org/ontology/",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "star_rating",
+      "en" : "dbp:star rating"
+    },
+    "maxCardinality" : "5",
+    "minCardinality" : "1",
+    "domain" : "22",
+    "comment" : {
+      "en" : "Represents the number of stars assigned to a hotel."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology#hasHotelRating",
+    "baseIri" : "http://uoc.edu/knowledgeManagement/IntelligentTourismOntology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasHotelRating",
+      "en" : "has hotel rating"
+    },
+    "domain" : "22",
+    "comment" : {
+      "en" : "Relates a hotel to its associated rating value."
+    },
+    "attributes" : [ "object" ],
+    "id" : "104"
+  } ]
+}
