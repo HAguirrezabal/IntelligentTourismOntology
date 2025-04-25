@@ -30,7 +30,7 @@
         <terms:license xml:lang="en">4.0</terms:license>
         <terms:title xml:lang="en">Intelligent Tourism Ontology</terms:title>
         <vann:preferredNamespacePrefix xml:lang="en">ito</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri xml:lang="en">https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.owl</vann:preferredNamespaceUri>
+        <vann:preferredNamespaceUri xml:lang="en">https://haguirrezabal.github.io/IntelligentTourismOntology/docs/Documentation/ontology.rdf</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">Ontology that models the main entities involved in intelligent tourism such as cities, hotels, events, transport and ratings.</rdfs:comment>
         <rdfs:label xml:lang="en">Intelligent Tourism Ontology</rdfs:label>
         <owl:versionIRI xml:lang="en">http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology/1.0.0</owl:versionIRI>
