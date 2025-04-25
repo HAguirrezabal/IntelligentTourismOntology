@@ -1,0 +1,537 @@
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/dc/terms/contributor> "Héctor Aguirrezábal Blanco"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/dc/terms/created> "2025-04-24"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/dc/terms/creator> "Héctor Aguirrezábal Blanco"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/dc/terms/description> "Ontology that models key entities involved in intelligent tourism such as hotels, restaurants, events, and transportation."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/dc/terms/license> "4.0"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/dc/terms/title> "Intelligent Tourism Ontology"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ito"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.owl"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology that models the main entities involved in intelligent tourism such as cities, hotels, events, transport and ratings."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://www.w3.org/2000/01/rdf-schema#label> "Intelligent Tourism Ontology"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://www.w3.org/2002/07/owl#priorVersion> "1.0"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://www.w3.org/2002/07/owl#versionIRI> "http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology/1.0.0"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#equivalentClass
+<http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#imports
+<http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a set of coordinates with a city."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf> <http://www.w3.org/2000/01/rdf-schema#label> "are coordinates of"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the city where a resource is locate."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf> <http://www.w3.org/2000/01/rdf-schema#label> "city of"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an attraction to its associated rating value."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating> <http://www.w3.org/2000/01/rdf-schema#label> "has attraction rating"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a city to its geographical coordinates."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates> <http://www.w3.org/2000/01/rdf-schema#label> "has coordinates"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the cuisine style offered by a restaurant"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle> <http://www.w3.org/2000/01/rdf-schema#label> "has cuisine style"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a hotel to its associated rating value."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating> <http://www.w3.org/2000/01/rdf-schema#label> "has hotel rating"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a type of hotel to a hotel."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType> <http://www.w3.org/2000/01/rdf-schema#label> "has hotel type"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a restaurant to its associated rating value."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating> <http://www.w3.org/2000/01/rdf-schema#label> "has restaurant rating"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType> <http://www.w3.org/2000/01/rdf-schema#range> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a type of event to an event."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType> <http://www.w3.org/2000/01/rdf-schema#label> "has event type"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "In this case use as a Datatype double instead of literal despite of the definition of the ontology reused."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents the y coordinate, that is the latitude."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/arco/ontology/location/lat"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> <http://www.w3.org/2000/01/rdf-schema#label> "latitude"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "In this case use as a Datatype double instead of literal despite of the definition of the ontology reused."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents the x coordinate, that is the longitude."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://w3id.org/arco/ontology/location/long"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the average price of a meal per person."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal> <http://www.w3.org/2000/01/rdf-schema#label> "average price per meal"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the average price of a night in a hotel."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight> <http://www.w3.org/2000/01/rdf-schema#label> "average price per night"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the average price of a transit by a mean of transportation."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit> <http://www.w3.org/2000/01/rdf-schema#label> "average price per transit"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name> <http://www.w3.org/2000/01/rdf-schema#comment> "A name for some thing."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://xmlns.com/foaf/spec/#term_name"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://xmlns.com/foaf/spec/#term_name"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the evaluation score of a resource"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating> <http://www.w3.org/2000/01/rdf-schema#label> "rating"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the number of stars assigned to a hotel."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://dbpedia.org/ontology/"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> <http://www.w3.org/2000/01/rdf-schema#label> "star rating"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/starRating"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian> <http://www.w3.org/2000/01/rdf-schema#comment> "Andalusian cuisine is the style of cuisine which have its origin in the gastronomy tradition of the Spanish region of Andalucía."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian> <http://www.w3.org/2000/01/rdf-schema#label> "Andalusian Cuisine"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach> <http://www.w3.org/2000/01/rdf-schema#comment> "A beach is a natural landform along the shoreline of an ocean, sea, lake, or river, often visited for recreation and relaxation."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach> <http://www.w3.org/2000/01/rdf-schema#label> "Beach"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Beach hotel is the type of hotel which has its origin in tourism facilities located near or on the coast, designed for beach-related activities."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Beach Hotel"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle> <http://www.w3.org/2000/01/rdf-schema#comment> "A bicycle is a human-powered two-wheeled vehicle used for personal transportation, especially in urban and recreational contexts."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle> <http://www.w3.org/2000/01/rdf-schema#label> "Bicycle"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "Building is defined as a Civil Engineering structure such as a house, worship center, factory etc. that has a foundation, wall, roof etc. that protect human being and their properties from direct harsh effect of weather like rain, wind, sun etc. (http://en.wikipedia.org/wiki/Building)."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Building"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus> <http://www.w3.org/2000/01/rdf-schema#comment> "A bus is a large motor vehicle designed to carry many passengers, usually following fixed routes and schedules."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus> <http://www.w3.org/2000/01/rdf-schema#label> "Bus"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Business hotel is the type of hotel which has its origin in the hospitality services focused on corporate or professional travelers."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Business Hotel"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of the average meals is equal or inferior to 15."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Cheap Restaurant"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A city is a large human settlement."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/city"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> <http://www.w3.org/2002/07/owl#disjointWith> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents the set of coordinates, geographic or projected, which allows the georeferencing of an object. For the punctual georeferencing there is only a pair of coordinates. For the linear and areal georeferencing there are more pairs of coordinates identifying those points of the line or area representing the object."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "a-loc:Coordinates"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://w3id.org/arco/ontology/location/Coordinates"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Cuisine Style is a national cuisine of a food or restaurant."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> <http://www.w3.org/2000/01/rdf-schema#label> "CuisineStyle"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Cultural Atraction is a place or event that showcases the heritage, traditions, art, or history of a society or region."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Attraction"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A cultural event is an occasion that promotes or celebrates the arts, heritage, or traditions of a community or region."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "CulturalEvent"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An event is a temporary and scheduled happening, like a conference, festival, competition or similar"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the type of Event."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> <http://www.w3.org/2000/01/rdf-schema#label> "Event Type"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of the average meals is over 50."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Expensive Restaurant"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy> <http://www.w3.org/2000/01/rdf-schema#comment> "A gastronomy event focuses on food, culinary traditions, and the appreciation of cuisine, such as food festivals or tasting experiences."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy> <http://www.w3.org/2000/01/rdf-schema#label> "GastronomyEvent"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "5"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel is a business enterprise that provides lodging in a single building paid on a short-term basis"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> <http://www.w3.org/2000/01/rdf-schema#sameAs> "http://dbpedia.org/ontology/"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> <http://www.w3.org/2000/01/rdf-schema#comment> "Hotel type refers to the classification of hotels based on their purpose, location, amenities, or target clientele."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel Type"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian> <http://www.w3.org/2000/01/rdf-schema#comment> "Italian cuisine is the style of cuisine which have its origin in the Italy gastronomy tradition."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian> <http://www.w3.org/2000/01/rdf-schema#label> "Italian Cuisine"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese> <http://www.w3.org/2000/01/rdf-schema#comment> "Japanese cuisine is the style of cuisine which have its origin in the Japanese gastronomy tradition."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese> <http://www.w3.org/2000/01/rdf-schema#label> "Japanese Cuisine"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Luxury hotel is the type of hotel which has its origin in premium hospitality experiences that offer high-end services and exclusive amenities."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Luxury Hotel"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean of Transportation is a system, vehicle, or method used to carry or move people or goods from one place to another"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> <http://www.w3.org/2000/01/rdf-schema#label> "Mean of Transportation"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/MeanOfTransportation"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> <http://www.w3.org/2000/01/rdf-schema#comment> "Mean of Transportation type refers to the classification of transportation modes based on their means of mobility and typical usage in urban or intercity travel."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> <http://www.w3.org/2000/01/rdf-schema#label> "Mean of Transportation Type" .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean> <http://www.w3.org/2000/01/rdf-schema#comment> "Mediterranean cuisine is the style of cuisine which have its origin in the Mediterranean gastronomy tradition."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean> <http://www.w3.org/2000/01/rdf-schema#label> "Mediterranean Cuisine"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro> <http://www.w3.org/2000/01/rdf-schema#comment> "A metro is a high-capacity urban public transit system operating on dedicated tracks, often underground or elevated."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro> <http://www.w3.org/2000/01/rdf-schema#label> "Metro"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican> <http://www.w3.org/2000/01/rdf-schema#comment> "Mexican cuisine is the style of cuisine which have its origin in the Mexican gastronomy tradition."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican> <http://www.w3.org/2000/01/rdf-schema#label> "Mexican Cuisine"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of the average meals is strictly over 15 and equals or inferior to 50."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Mid Price Restaurant"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument> <http://www.w3.org/2000/01/rdf-schema#comment> "A monument is a structure or site of historical, cultural, or artistic significance, often erected to commemorate an event or person."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument> <http://www.w3.org/2000/01/rdf-schema#label> "Monument"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music> <http://www.w3.org/2000/01/rdf-schema#comment> "A music event features live or recorded musical performances, concerts, festivals, or competitions."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music> <http://www.w3.org/2000/01/rdf-schema#label> "MusicEvent"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park> <http://www.w3.org/2000/01/rdf-schema#comment> "A park is a public outdoor space typically designed for recreation, relaxation, and the enjoyment of nature."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park> <http://www.w3.org/2000/01/rdf-schema#label> "Park"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> <http://www.w3.org/2000/01/rdf-schema#comment> "Rating is a classification or ranking of  something based on a comparative assessment of their quality, standard, or performance."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A restaurant is a single establishment which prepares and serves food, located in building"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Restaurant"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Rural hotel is the type of hotel which has its origin in the hospitality services that takes place in the rural environments."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Rural Hotel"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports> <http://www.w3.org/2000/01/rdf-schema#comment> "A sports event involves physical competitions or athletic performances, including tournaments, matches, or races."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports> <http://www.w3.org/2000/01/rdf-schema#label> "SportsEvent"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi> <http://www.w3.org/2000/01/rdf-schema#comment> "A taxi is a road vehicle for hire that transports passengers between locations of their choice, typically for a metered fare."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi> <http://www.w3.org/2000/01/rdf-schema#label> "Taxi"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological> <http://www.w3.org/2000/01/rdf-schema#comment> "A technological event involves innovation, scientific advancements, or demonstrations of new technologies, such as tech fairs or conferences."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological> <http://www.w3.org/2000/01/rdf-schema#label> "TechnologicalEvent"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating> .
+_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A tourist attraction is a place of interest that tourists visit, typically for its inherent or exhibited cultural value, historical significance, natural or artificial beauty, or entertainment opportunities."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction> <http://www.w3.org/2000/01/rdf-schema#label> "Touristic Attraction"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> <http://www.w3.org/2000/01/rdf-schema#comment> "Tourist Attraction Type is a classification or category that identifies the specific nature or theme of a tourist destination"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType> <http://www.w3.org/2000/01/rdf-schema#label> "Touristic Attraction Type"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Touristic hotel is the type of hotel which has its origin in the hospitality services dedicated to leisure and vacation-oriented guests."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel> <http://www.w3.org/2000/01/rdf-schema#label> "Touristic Hotel"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram> <http://www.w3.org/2000/01/rdf-schema#comment> "A tram is a rail vehicle that runs on tracks along public urban streets and is used for local public transport."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram> <http://www.w3.org/2000/01/rdf-schema#label> "Tram"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany> <http://www.w3.org/2000/01/rdf-schema#comment> "A transportation company is an organization responsible for operating transport services such as buses, taxis, metro systems, or other means of mobility."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany> <http://www.w3.org/2000/01/rdf-schema#label> "Transportation Company"@en .
+# 
+# http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building> .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue> <http://www.w3.org/2000/01/rdf-schema#comment> "A Venue is the place where something happens, especially an organized event such as a concert, conference, or sports competition."@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://dbpedia.org/ontology"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue> <http://www.w3.org/2000/01/rdf-schema#label> "Venue"@en .
+<http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Venue"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
