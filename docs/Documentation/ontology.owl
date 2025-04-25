@@ -1,0 +1,924 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#"
+     xml:base="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology">
+        <terms:contributor xml:lang="en">Héctor Aguirrezábal Blanco</terms:contributor>
+        <terms:created xml:lang="en">2025-04-24</terms:created>
+        <terms:creator xml:lang="en">Héctor Aguirrezábal Blanco</terms:creator>
+        <terms:description xml:lang="en">Ontology that models key entities involved in intelligent tourism such as hotels, restaurants, events, and transportation.</terms:description>
+        <terms:license xml:lang="en">4.0</terms:license>
+        <terms:title xml:lang="en">Intelligent Tourism Ontology</terms:title>
+        <vann:preferredNamespacePrefix xml:lang="en">ito</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri xml:lang="en">https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.owl</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Ontology that models the main entities involved in intelligent tourism such as cities, hotels, events, transport and ratings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Intelligent Tourism Ontology</rdfs:label>
+        <owl:priorVersion xml:lang="en">1.0</owl:priorVersion>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#equivalentClass -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#equivalentClass"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#imports -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#imports"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf">
+        <owl:inverseOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates"/>
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City"/>
+        <rdfs:comment xml:lang="en">Relates a set of coordinates with a city.</rdfs:comment>
+        <rdfs:label xml:lang="en">are coordinates of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building"/>
+                    <rdf:Description rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event"/>
+                    <rdf:Description rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation"/>
+                    <rdf:Description rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City"/>
+        <rdfs:comment xml:lang="en">Relates the city where a resource is locate.</rdfs:comment>
+        <rdfs:label xml:lang="en">city of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+        <rdfs:comment xml:lang="en">Relates an attraction to its associated rating value.</rdfs:comment>
+        <rdfs:label xml:lang="en">has attraction rating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates"/>
+        <rdfs:comment xml:lang="en">Relates a city to its geographical coordinates.</rdfs:comment>
+        <rdfs:label xml:lang="en">has coordinates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"/>
+        <rdfs:comment xml:lang="en">Indicates the cuisine style offered by a restaurant</rdfs:comment>
+        <rdfs:label xml:lang="en">has cuisine style</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+        <rdfs:comment xml:lang="en">Relates a hotel to its associated rating value.</rdfs:comment>
+        <rdfs:label xml:lang="en">has hotel rating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"/>
+        <rdfs:comment xml:lang="en">Relates a type of hotel to a hotel.</rdfs:comment>
+        <rdfs:label xml:lang="en">has hotel type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+        <rdfs:comment xml:lang="en">Relates a restaurant to its associated rating value.</rdfs:comment>
+        <rdfs:label xml:lang="en">has restaurant rating</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType -->
+
+
+    <owl:ObjectProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event"/>
+        <rdfs:range rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType"/>
+        <rdfs:comment xml:lang="en">Relates a type of event to an event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has event type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">In this case use as a Datatype double instead of literal despite of the definition of the ontology reused.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the y coordinate, that is the latitude.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/arco/ontology/location/lat</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">In this case use as a Datatype double instead of literal despite of the definition of the ontology reused.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property represents the x coordinate, that is the longitude.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/arco/ontology/location/long</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Indicates the average price of a meal per person.</rdfs:comment>
+        <rdfs:label xml:lang="en">average price per meal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Indicates the average price of a night in a hotel.</rdfs:comment>
+        <rdfs:label xml:lang="en">average price per night</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Indicates the average price of a transit by a mean of transportation.</rdfs:comment>
+        <rdfs:label xml:lang="en">average price per transit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A name for some thing.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://xmlns.com/foaf/spec/#term_name</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://xmlns.com/foaf/spec/#term_name</rdfs:sameAs>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">Indicates the evaluation score of a resource</rdfs:comment>
+        <rdfs:label xml:lang="en">rating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating">
+        <rdfs:domain rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Represents the number of stars assigned to a hotel.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">http://dbpedia.org/ontology/</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">star rating</rdfs:label>
+        <rdfs:sameAs xml:lang="en">https://dbpedia.org/ontology/starRating</rdfs:sameAs>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"/>
+        <rdfs:comment xml:lang="en">Andalusian cuisine is the style of cuisine which have its origin in the gastronomy tradition of the Spanish region of Andalucía.</rdfs:comment>
+        <rdfs:label xml:lang="en">Andalusian Cuisine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType"/>
+        <rdfs:comment xml:lang="en">A beach is a natural landform along the shoreline of an ocean, sea, lake, or river, often visited for recreation and relaxation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"/>
+        <rdfs:comment xml:lang="en">Beach hotel is the type of hotel which has its origin in tourism facilities located near or on the coast, designed for beach-related activities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Beach Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType"/>
+        <rdfs:comment xml:lang="en">A bicycle is a human-powered two-wheeled vehicle used for personal transportation, especially in urban and recreational contexts.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bicycle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">
+        <rdfs:comment xml:lang="en">Building is defined as a Civil Engineering structure such as a house, worship center, factory etc. that has a foundation, wall, roof etc. that protect human being and their properties from direct harsh effect of weather like rain, wind, sun etc. (http://en.wikipedia.org/wiki/Building).</rdfs:comment>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+        <rdfs:sameAs xml:lang="en">https://dbpedia.org/ontology/Building</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType"/>
+        <rdfs:comment xml:lang="en">A bus is a large motor vehicle designed to carry many passengers, usually following fixed routes and schedules.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"/>
+        <rdfs:comment xml:lang="en">Business hotel is the type of hotel which has its origin in the hospitality services focused on corporate or professional travelers.</rdfs:comment>
+        <rdfs:label xml:lang="en">Business Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant"/>
+        <rdfs:comment xml:lang="en">The price of the average meals is equal or inferior to 15.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cheap Restaurant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City">
+        <rdfs:comment xml:lang="en">A city is a large human settlement.</rdfs:comment>
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:sameAs xml:lang="en">https://dbpedia.org/ontology/city</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+        <rdfs:comment xml:lang="en">This class represents the set of coordinates, geographic or projected, which allows the georeferencing of an object. For the punctual georeferencing there is only a pair of coordinates. For the linear and areal georeferencing there are more pairs of coordinates identifying those points of the line or area representing the object.</rdfs:comment>
+        <rdfs:label xml:lang="en">a-loc:Coordinates</rdfs:label>
+        <rdfs:sameAs xml:lang="en">https://w3id.org/arco/ontology/location/Coordinates</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">
+        <rdfs:comment xml:lang="en">Cuisine Style is a national cuisine of a food or restaurant.</rdfs:comment>
+        <rdfs:label xml:lang="en">CuisineStyle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType"/>
+        <rdfs:comment xml:lang="en">Cultural Atraction is a place or event that showcases the heritage, traditions, art, or history of a society or region.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cultural Attraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType"/>
+        <rdfs:comment xml:lang="en">A cultural event is an occasion that promotes or celebrates the arts, heritage, or traditions of a community or region.</rdfs:comment>
+        <rdfs:label xml:lang="en">CulturalEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event">
+        <rdfs:comment xml:lang="en">An event is a temporary and scheduled happening, like a conference, festival, competition or similar</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event"/>
+        <rdfs:comment xml:lang="en">Indicates the type of Event.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant"/>
+        <rdfs:comment xml:lang="en">The price of the average meals is over 50.</rdfs:comment>
+        <rdfs:label xml:lang="en">Expensive Restaurant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType"/>
+        <rdfs:comment xml:lang="en">A gastronomy event focuses on food, culinary traditions, and the appreciation of cuisine, such as food festivals or tasting experiences.</rdfs:comment>
+        <rdfs:label xml:lang="en">GastronomyEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A hotel is a business enterprise that provides lodging in a single building paid on a short-term basis</rdfs:comment>
+        <rdfs:label xml:lang="en">Hotel</rdfs:label>
+        <rdfs:sameAs xml:lang="en">http://dbpedia.org/ontology/</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel"/>
+        <rdfs:comment xml:lang="en">Hotel type refers to the classification of hotels based on their purpose, location, amenities, or target clientele.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hotel Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"/>
+        <rdfs:comment xml:lang="en">Italian cuisine is the style of cuisine which have its origin in the Italy gastronomy tradition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Italian Cuisine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"/>
+        <rdfs:comment xml:lang="en">Japanese cuisine is the style of cuisine which have its origin in the Japanese gastronomy tradition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Japanese Cuisine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"/>
+        <rdfs:comment xml:lang="en">Luxury hotel is the type of hotel which has its origin in premium hospitality experiences that offer high-end services and exclusive amenities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Luxury Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">
+        <rdfs:comment xml:lang="en">Mean of Transportation is a system, vehicle, or method used to carry or move people or goods from one place to another</rdfs:comment>
+        <rdfs:label xml:lang="en">Mean of Transportation</rdfs:label>
+        <rdfs:sameAs xml:lang="en">https://dbpedia.org/ontology/MeanOfTransportation</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation"/>
+        <rdfs:comment xml:lang="en">Mean of Transportation type refers to the classification of transportation modes based on their means of mobility and typical usage in urban or intercity travel.</rdfs:comment>
+        <rdfs:label>Mean of Transportation Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"/>
+        <rdfs:comment xml:lang="en">Mediterranean cuisine is the style of cuisine which have its origin in the Mediterranean gastronomy tradition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mediterranean Cuisine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType"/>
+        <rdfs:comment xml:lang="en">A metro is a high-capacity urban public transit system operating on dedicated tracks, often underground or elevated.</rdfs:comment>
+        <rdfs:label xml:lang="en">Metro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"/>
+        <rdfs:comment xml:lang="en">Mexican cuisine is the style of cuisine which have its origin in the Mexican gastronomy tradition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mexican Cuisine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant"/>
+        <rdfs:comment xml:lang="en">The price of the average meals is strictly over 15 and equals or inferior to 50.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mid Price Restaurant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType"/>
+        <rdfs:comment xml:lang="en">A monument is a structure or site of historical, cultural, or artistic significance, often erected to commemorate an event or person.</rdfs:comment>
+        <rdfs:label xml:lang="en">Monument</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType"/>
+        <rdfs:comment xml:lang="en">A music event features live or recorded musical performances, concerts, festivals, or competitions.</rdfs:comment>
+        <rdfs:label xml:lang="en">MusicEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType"/>
+        <rdfs:comment xml:lang="en">A park is a public outdoor space typically designed for recreation, relaxation, and the enjoyment of nature.</rdfs:comment>
+        <rdfs:label xml:lang="en">Park</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">
+        <rdfs:comment xml:lang="en">Rating is a classification or ranking of  something based on a comparative assessment of their quality, standard, or performance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A restaurant is a single establishment which prepares and serves food, located in building</rdfs:comment>
+        <rdfs:label xml:lang="en">Restaurant</rdfs:label>
+        <rdfs:sameAs xml:lang="en">https://dbpedia.org/ontology/Restaurant</rdfs:sameAs>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"/>
+        <rdfs:comment xml:lang="en">Rural hotel is the type of hotel which has its origin in the hospitality services that takes place in the rural environments.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rural Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType"/>
+        <rdfs:comment xml:lang="en">A sports event involves physical competitions or athletic performances, including tournaments, matches, or races.</rdfs:comment>
+        <rdfs:label xml:lang="en">SportsEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType"/>
+        <rdfs:comment xml:lang="en">A taxi is a road vehicle for hire that transports passengers between locations of their choice, typically for a metered fare.</rdfs:comment>
+        <rdfs:label xml:lang="en">Taxi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType"/>
+        <rdfs:comment xml:lang="en">A technological event involves innovation, scientific advancements, or demonstrations of new technologies, such as tech fairs or conferences.</rdfs:comment>
+        <rdfs:label xml:lang="en">TechnologicalEvent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A tourist attraction is a place of interest that tourists visit, typically for its inherent or exhibited cultural value, historical significance, natural or artificial beauty, or entertainment opportunities.</rdfs:comment>
+        <rdfs:label xml:lang="en">Touristic Attraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction"/>
+        <rdfs:comment xml:lang="en">Tourist Attraction Type is a classification or category that identifies the specific nature or theme of a tourist destination</rdfs:comment>
+        <rdfs:label xml:lang="en">Touristic Attraction Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"/>
+        <rdfs:comment xml:lang="en">Touristic hotel is the type of hotel which has its origin in the hospitality services dedicated to leisure and vacation-oriented guests.</rdfs:comment>
+        <rdfs:label xml:lang="en">Touristic Hotel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType"/>
+        <rdfs:comment xml:lang="en">A tram is a rail vehicle that runs on tracks along public urban streets and is used for local public transport.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tram</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation"/>
+        <rdfs:comment xml:lang="en">A transportation company is an organization responsible for operating transport services such as buses, taxis, metro systems, or other means of mobility.</rdfs:comment>
+        <rdfs:label xml:lang="en">Transportation Company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue -->
+
+
+    <owl:Class rdf:about="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue">
+        <rdfs:subClassOf rdf:resource="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building"/>
+        <rdfs:comment xml:lang="en">A Venue is the place where something happens, especially an organized event such as a concert, conference, or sports competition.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://dbpedia.org/ontology</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Venue</rdfs:label>
+        <rdfs:sameAs xml:lang="en">https://dbpedia.org/ontology/Venue</rdfs:sameAs>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
