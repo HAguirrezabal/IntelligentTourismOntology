@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Intelligent Tourism Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.rdf","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.rdf","name":"Intelligent Tourism Ontology", "headline":"Document describing the ontology https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.rdf", "dateReleased":"2025-04-24", "version":"1.0.0", "author":[{"@type":"Person","name":"Héctor Aguirrezábal Blanco"}], "contributor":[{"@type":"Person","name":"Héctor Aguirrezábal Blanco"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Intelligent Tourism Ontology</h1>
+<h2>Release: 2025-04-24</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology/1.0.0">http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology/1.0.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.rdf">https://github.com/HAguirrezabal/IntelligentTourismOntology/blob/main/docs/Documentation/ontology.rdf</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Authors:</dt>
+<dd>Héctor Aguirrezábal Blanco</dd>
+
+<dt>Contributors:</dt>
+<dd>Héctor Aguirrezábal Blanco</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-4.0-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Héctor Aguirrezábal Blanco. Intelligent Tourism Ontology. Revision: 1.0.0. Retrieved from: http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology/1.0.0</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>catalogue</b></td><td>&lt;https://w3id.org/arco/ontology/catalogue/&gt;</td></tr>
+<tr><td><b>core</b></td><td>&lt;https://w3id.org/arco/ontology/core/&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>dcat</b></td><td>&lt;http://www.w3.org/ns/dcat#&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
+<tr><td><b>ito</b></td><td>&lt;http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#&gt;</td></tr>
+<tr><td><b>ns</b></td><td>&lt;http://www.w3.org/2006/vcard/ns#&gt;</td></tr>
+<tr><td><b>ns2</b></td><td>&lt;http://creativecommons.org/ns#&gt;</td></tr>
+<tr><td><b>ns3</b></td><td>&lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt;</td></tr>
+<tr><td><b>opla</b></td><td>&lt;http://ontologydesignpatterns.org/opla/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>terms1</b></td><td>&lt;http://open.vocab.org/terms/&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>wot</b></td><td>&lt;http://xmlns.com/wot/0.1/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Intelligent Tourism Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">a-loc:Coordinates</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian">Andalusian Cuisine</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach">Beach</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel">Beach Hotel</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle">Bicycle</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">Building</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus">Bus</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel">Business Hotel</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant">Cheap Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City">City</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction">Cultural Attraction</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event">Event</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant">Expensive Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy">GastronomyEvent</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian">Italian Cuisine</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese">Japanese Cuisine</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel">Luxury Hotel</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">Mean of Transportation</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean">Mediterranean Cuisine</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro">Metro</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican">Mexican Cuisine</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant">Mid Price Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument">Monument</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music">MusicEvent</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park">Park</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">Rating</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel">Rural Hotel</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports">SportsEvent</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi">Taxi</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological">TechnologicalEvent</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction">Touristic Attraction</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">Touristic Attraction Type</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel">Touristic Hotel</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram">Tram</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany">Transportation Company</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue">Venue</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf">are coordinates of</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">city of</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating">has attraction rating</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates">has coordinates</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle">has cuisine style</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType">has event type</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating">has hotel rating</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType">has hotel type</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating">has restaurant rating</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal">average price per meal</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight">average price per night</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit">average price per transit</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude">latitude</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude">longitude</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name">name</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating">rating</a>
+   </li>
+   <li>
+      <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating"
+         title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating">star rating</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
+         <span>abstract</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#equivalentClass" title="http://www.w3.org/2002/07/owl#equivalentClass">
+         <span>equivalent Class</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#imports" title="http://www.w3.org/2002/07/owl#imports">
+         <span>imports</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs">
+         <span>same As</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#versionIRI" title="http://www.w3.org/2002/07/owl#versionIRI">
+         <span>version I R I</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Intelligent Tourism Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">Ontology that models the main entities involved in intelligent tourism such as cities, hotels, events, transport and ratings.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Intelligent Tourism Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Intelligent Tourism Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">a-loc:Coordinates</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian">Andalusian Cuisine</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach">Beach</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel">Beach Hotel</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle">Bicycle</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">Building</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus">Bus</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel">Business Hotel</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant">Cheap Restaurant</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City">City</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction">Cultural Attraction</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event">Event</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant">Expensive Restaurant</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy">GastronomyEvent</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian">Italian Cuisine</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese">Japanese Cuisine</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel">Luxury Hotel</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">Mean of Transportation</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean">Mediterranean Cuisine</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro">Metro</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican">Mexican Cuisine</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant">Mid Price Restaurant</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument">Monument</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music">MusicEvent</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park">Park</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">Rating</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel">Rural Hotel</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports">SportsEvent</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi">Taxi</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological">TechnologicalEvent</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction">Touristic Attraction</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">Touristic Attraction Type</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel">Touristic Hotel</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram">Tram</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany">Transportation Company</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue">Venue</a></li>
+ </ul>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">
+  <h3>a-loc:Coordinates<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates</p>
+  <div class="comment">
+   <span class="markdown">This class represents the set of coordinates, geographic or projected, which allows the georeferencing of an object. For the punctual georeferencing there is only a pair of coordinates. For the linear and areal georeferencing there are more pairs of coordinates identifying those points of the line or area representing the object.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf">are coordinates of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude">latitude</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude">longitude</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates">has coordinates</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian">
+  <h3>Andalusian Cuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian</p>
+  <div class="comment">
+   <span class="markdown">Andalusian cuisine is the style of cuisine which have its origin in the gastronomy tradition of the Spanish region of Andalucía.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach">
+  <h3>Beach<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach</p>
+  <div class="comment">
+   <span class="markdown">A beach is a natural landform along the shoreline of an ocean, sea, lake, or river, often visited for recreation and relaxation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">Touristic Attraction Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel">
+  <h3>Beach Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel</p>
+  <div class="comment">
+   <span class="markdown">Beach hotel is the type of hotel which has its origin in tourism facilities located near or on the coast, designed for beach-related activities.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle">
+  <h3>Bicycle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle</p>
+  <div class="comment">
+   <span class="markdown">A bicycle is a human-powered two-wheeled vehicle used for personal transportation, especially in urban and recreational contexts.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">
+  <h3>Building<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building</p>
+  <div class="comment">
+   <span class="markdown">Building is defined as a Civil Engineering structure such as a house, worship center, factory etc. that has a foundation, wall, roof etc. that protect human being and their properties from direct harsh effect of weather like rain, wind, sun etc. (http://en.wikipedia.org/wiki/Building).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue">Venue</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">city of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus">
+  <h3>Bus<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus</p>
+  <div class="comment">
+   <span class="markdown">A bus is a large motor vehicle designed to carry many passengers, usually following fixed routes and schedules.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel">
+  <h3>Business Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel</p>
+  <div class="comment">
+   <span class="markdown">Business hotel is the type of hotel which has its origin in the hospitality services focused on corporate or professional travelers.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant">
+  <h3>Cheap Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant</p>
+  <div class="comment">
+   <span class="markdown">The price of the average meals is equal or inferior to 15.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City">
+  <h3>City<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City</p>
+  <div class="comment">
+   <span class="markdown">A city is a large human settlement.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates">has coordinates</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf">are coordinates of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">city of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">
+  <h3>CuisineStyle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle</p>
+  <div class="comment">
+   <span class="markdown">Cuisine Style is a national cuisine of a food or restaurant.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Andalusian">Andalusian Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian">Italian Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese">Japanese Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean">Mediterranean Cuisine</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican">Mexican Cuisine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle">has cuisine style</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction">
+  <h3>Cultural Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction</p>
+  <div class="comment">
+   <span class="markdown">Cultural Atraction is a place or event that showcases the heritage, traditions, art, or history of a society or region.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">Touristic Attraction Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent">
+  <h3>CulturalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent</p>
+  <div class="comment">
+   <span class="markdown">A cultural event is an occasion that promotes or celebrates the arts, heritage, or traditions of a community or region.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event</p>
+  <div class="comment">
+   <span class="markdown">An event is a temporary and scheduled happening, like a conference, festival, competition or similar</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">city of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType">has event type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">
+  <h3>Event Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType</p>
+  <div class="comment">
+   <span class="markdown">Indicates the type of Event.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalEvent">CulturalEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy">GastronomyEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music">MusicEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports">SportsEvent</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological">TechnologicalEvent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType">has event type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant">
+  <h3>Expensive Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant</p>
+  <div class="comment">
+   <span class="markdown">The price of the average meals is over 50.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy">
+  <h3>GastronomyEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Gastronomy</p>
+  <div class="comment">
+   <span class="markdown">A gastronomy event focuses on food, culinary traditions, and the appreciation of cuisine, such as food festivals or tasting experiences.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">
+  <h3>Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel</p>
+  <div class="comment">
+   <span class="markdown">A hotel is a business enterprise that provides lodging in a single building paid on a short-term basis</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">Building</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight">average price per night</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating">has hotel rating</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType">has hotel type</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating">star rating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">
+  <h3>Hotel Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType</p>
+  <div class="comment">
+   <span class="markdown">Hotel type refers to the classification of hotels based on their purpose, location, amenities, or target clientele.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BeachHotel">Beach Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#BusinessHotel">Business Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel">Luxury Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel">Rural Hotel</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel">Touristic Hotel</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType">has hotel type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian">
+  <h3>Italian Cuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Italian</p>
+  <div class="comment">
+   <span class="markdown">Italian cuisine is the style of cuisine which have its origin in the Italy gastronomy tradition.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese">
+  <h3>Japanese Cuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Japanese</p>
+  <div class="comment">
+   <span class="markdown">Japanese cuisine is the style of cuisine which have its origin in the Japanese gastronomy tradition.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel">
+  <h3>Luxury Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#LuxuryHotel</p>
+  <div class="comment">
+   <span class="markdown">Luxury hotel is the type of hotel which has its origin in premium hospitality experiences that offer high-end services and exclusive amenities.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">
+  <h3>Mean of Transportation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation</p>
+  <div class="comment">
+   <span class="markdown">Mean of Transportation is a system, vehicle, or method used to carry or move people or goods from one place to another</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany">Transportation Company</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit">average price per transit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">city of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">
+  <h3>Mean of Transportation Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType</p>
+  <div class="comment">
+   <span class="markdown">Mean of Transportation type refers to the classification of transportation modes based on their means of mobility and typical usage in urban or intercity travel.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">Mean of Transportation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bicycle">Bicycle</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Bus">Bus</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro">Metro</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi">Taxi</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram">Tram</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean">
+  <h3>Mediterranean Cuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mediterranean</p>
+  <div class="comment">
+   <span class="markdown">Mediterranean cuisine is the style of cuisine which have its origin in the Mediterranean gastronomy tradition.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro">
+  <h3>Metro<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Metro</p>
+  <div class="comment">
+   <span class="markdown">A metro is a high-capacity urban public transit system operating on dedicated tracks, often underground or elevated.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican">
+  <h3>Mexican Cuisine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Mexican</p>
+  <div class="comment">
+   <span class="markdown">Mexican cuisine is the style of cuisine which have its origin in the Mexican gastronomy tradition.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant">
+  <h3>Mid Price Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant</p>
+  <div class="comment">
+   <span class="markdown">The price of the average meals is strictly over 15 and equals or inferior to 50.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument">
+  <h3>Monument<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument</p>
+  <div class="comment">
+   <span class="markdown">A monument is a structure or site of historical, cultural, or artistic significance, often erected to commemorate an event or person.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">Touristic Attraction Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music">
+  <h3>MusicEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Music</p>
+  <div class="comment">
+   <span class="markdown">A music event features live or recorded musical performances, concerts, festivals, or competitions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park">
+  <h3>Park<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park</p>
+  <div class="comment">
+   <span class="markdown">A park is a public outdoor space typically designed for recreation, relaxation, and the enjoyment of nature.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">Touristic Attraction Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">
+  <h3>Rating<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating</p>
+  <div class="comment">
+   <span class="markdown">Rating is a classification or ranking of something based on a comparative assessment of their quality, standard, or performance.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating">rating</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating">has attraction rating</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating">has hotel rating</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating">has restaurant rating</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">a-loc:Coordinates</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">
+  <h3>Restaurant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant</p>
+  <div class="comment">
+   <span class="markdown">A restaurant is a single establishment which prepares and serves food, located in building</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">Building</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CheapRestaurant">Cheap Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#ExpensiveRestaurant">Expensive Restaurant</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MidPriceRestaurant">Mid Price Restaurant</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal">average price per meal</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle">has cuisine style</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating">has restaurant rating</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel">
+  <h3>Rural Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#RuralHotel</p>
+  <div class="comment">
+   <span class="markdown">Rural hotel is the type of hotel which has its origin in the hospitality services that takes place in the rural environments.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports">
+  <h3>SportsEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Sports</p>
+  <div class="comment">
+   <span class="markdown">A sports event involves physical competitions or athletic performances, including tournaments, matches, or races.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi">
+  <h3>Taxi<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Taxi</p>
+  <div class="comment">
+   <span class="markdown">A taxi is a road vehicle for hire that transports passengers between locations of their choice, typically for a metered fare.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological">
+  <h3>TechnologicalEvent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Technological</p>
+  <div class="comment">
+   <span class="markdown">A technological event involves innovation, scientific advancements, or demonstrations of new technologies, such as tech fairs or conferences.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction">
+  <h3>Touristic Attraction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction</p>
+  <div class="comment">
+   <span class="markdown">A tourist attraction is a place of interest that tourists visit, typically for its inherent or exhibited cultural value, historical significance, natural or artificial beauty, or entertainment opportunities.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">Touristic Attraction Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">city of</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating">has attraction rating</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType">
+  <h3>Touristic Attraction Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttractionType</p>
+  <div class="comment">
+   <span class="markdown">Tourist Attraction Type is a classification or category that identifies the specific nature or theme of a tourist destination</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction">Touristic Attraction</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Beach">Beach</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CulturalAttraction">Cultural Attraction</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Monument">Monument</a> <sup class="type-c" title="class">c</sup>, <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Park">Park</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel">
+  <h3>Touristic Hotel<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicHotel</p>
+  <div class="comment">
+   <span class="markdown">Touristic hotel is the type of hotel which has its origin in the hospitality services dedicated to leisure and vacation-oriented guests.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram">
+  <h3>Tram<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Tram</p>
+  <div class="comment">
+   <span class="markdown">A tram is a rail vehicle that runs on tracks along public urban streets and is used for local public transport.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportationType">Mean of Transportation Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany">
+  <h3>Transportation Company<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TransportationCompany</p>
+  <div class="comment">
+   <span class="markdown">A transportation company is an organization responsible for operating transport services such as buses, taxis, metro systems, or other means of mobility.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">Mean of Transportation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue">
+  <h3>Venue<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Venue</p>
+  <div class="comment">
+   <span class="markdown">A Venue is the place where something happens, especially an organized event such as a concert, conference, or sports competition.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://dbpedia.org/ontology
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">Building</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf">are coordinates of</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">city of</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating">has attraction rating</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates">has coordinates</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle">has cuisine style</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType">has event type</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating">has hotel rating</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType">has hotel type</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating">has restaurant rating</a></li>
+ </ul>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf">
+  <h3>are coordinates of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a set of coordinates with a city.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">a-loc:Coordinates</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates">has coordinates</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf">
+  <h3>city of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#cityOf</p>
+  <div class="comment">
+   <span class="markdown">Relates the city where a resource is locate.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Building">Building</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">Mean of Transportation</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction">Touristic Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating">
+  <h3>has attraction rating<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasAttractionRating</p>
+  <div class="comment">
+   <span class="markdown">Relates an attraction to its associated rating value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#TouristicAttraction">Touristic Attraction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates">
+  <h3>has coordinates<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCoordinates</p>
+  <div class="comment">
+   <span class="markdown">Relates a city to its geographical coordinates.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#City">City</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">a-loc:Coordinates</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#areCoordinatesOf">are coordinates of</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle">
+  <h3>has cuisine style<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasCuisineStyle</p>
+  <div class="comment">
+   <span class="markdown">Indicates the cuisine style offered by a restaurant</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#CuisineStyle">CuisineStyle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType">
+  <h3>has event type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasType</p>
+  <div class="comment">
+   <span class="markdown">Relates a type of event to an event.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#EventType">Event Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating">
+  <h3>has hotel rating<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelRating</p>
+  <div class="comment">
+   <span class="markdown">Relates a hotel to its associated rating value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType">
+  <h3>has hotel type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasHotelType</p>
+  <div class="comment">
+   <span class="markdown">Relates a type of hotel to a hotel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#HotelType">Hotel Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating">
+  <h3>has restaurant rating<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#hasRestaurantRating</p>
+  <div class="comment">
+   <span class="markdown">Relates a restaurant to its associated rating value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal">average price per meal</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight">average price per night</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit">average price per transit</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude">latitude</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude">longitude</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name">name</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating">rating</a></li>
+  <li><a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating">star rating</a></li>
+ </ul>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal">
+  <h3>average price per meal<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerMeal</p>
+  <div class="comment">
+   <span class="markdown">Indicates the average price of a meal per person.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Restaurant">Restaurant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight">
+  <h3>average price per night<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerNight</p>
+  <div class="comment">
+   <span class="markdown">Indicates the average price of a night in a hotel.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit">
+  <h3>average price per transit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#averagePricePerTransit</p>
+  <div class="comment">
+   <span class="markdown">Indicates the average price of a transit by a mean of transportation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#MeanOfTransportation">Mean of Transportation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude">
+  <h3>latitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Latitude</p>
+  <div class="comment">
+   <span class="markdown">In this case use as a Datatype double instead of literal despite of the definition of the ontology reused.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://w3id.org/arco/ontology/location/lat
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">a-loc:Coordinates</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude">
+  <h3>longitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Longitude</p>
+  <div class="comment">
+   <span class="markdown">In this case use as a Datatype double instead of literal despite of the definition of the ontology reused.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://w3id.org/arco/ontology/location/long
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Coordinates">a-loc:Coordinates</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name">
+  <h3>name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#name</p>
+  <div class="comment">
+   <span class="markdown">A name for some thing.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    http://xmlns.com/foaf/spec/#term_name
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating">
+  <h3>rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#rating</p>
+  <div class="comment">
+   <span class="markdown">Indicates the evaluation score of a resource</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Rating">Rating</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating">
+  <h3>star rating<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#starRating</p>
+  <div class="comment">
+   <span class="markdown">Represents the number of stars assigned to a hotel.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    http://dbpedia.org/ontology/
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel" title="http://uoc.edu/knowledgeRepresentation/IntelligentTourismOntology#Hotel">Hotel</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract"> <span>abstract</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor"> <span>contributor</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#equivalentClass" title="http://www.w3.org/2002/07/owl#equivalentClass"> <span>equivalent Class</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#imports" title="http://www.w3.org/2002/07/owl#imports"> <span>imports</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#sameAs" title="http://www.w3.org/2000/01/rdf-schema#sameAs"> <span>same As</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/2002/07/owl#versionIRI" title="http://www.w3.org/2002/07/owl#versionIRI"> <span>version I R I</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/abstract">
+  <h3>abstract<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/contributor">
+  <h3>contributor<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#equivalentClass">
+  <h3>equivalent Class<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#equivalentClass</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#imports">
+  <h3>imports<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#imports</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#sameAs">
+  <h3>same As<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#sameAs</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2002/07/owl#versionIRI">
+  <h3>version I R I<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2002/07/owl#versionIRI</p>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
